@@ -101,6 +101,24 @@ public class Array<E> {
     }
 
     /**
+     * 获取最后一个元素
+     *
+     * @return
+     */
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    /**
+     * 获取第一个元素
+     *
+     * @return
+     */
+    public E getFirst() {
+        return get(0);
+    }
+
+    /**
      * 更新某个索引下的元素
      *
      * @param index
