@@ -217,6 +217,26 @@ public class LinkedList<E> {
         return remove(size - 1);
     }
 
+    /**
+     * 删除链表中等于给定值 e 的所有节点。
+     *
+     * @param e
+     * @return
+     */
+    public void removeElement(E e) {
+        Node prev = dummyHead;
+        while (prev.next != null) {
+            if (e.equals(prev.next.e))
+                break;
+            prev = prev.next;
+        }
+        if (prev.next != null) {
+            Node delNode = prev.next;
+            prev.next = delNode.next;
+            delNode.next = null;
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
